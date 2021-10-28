@@ -1,4 +1,26 @@
 <!DOCTYPE html>
+
+<html>
 <head>
     <link rel="stylesheet" href="site.css">
+    <script src="../src/Brython3.2.8/brython.js"></script>
+    <script src="../src/Brython3.2.8/brython_stdlib.js"></script>
+    </script>
 </head>
+<body onload="brython()">
+    <script type="text/python">
+        import sys
+        from browser import document, alert
+        from bs4 import BeautifulSoup
+        import requests, time
+        process = 1
+        while process == 1:
+            source = requests.get('https://www.robloxforum.com').text
+            soup = BeautifulSoup(source, 'lxml')
+            text = soup.find('span', class_='block-footer-counter').text
+
+        document => text
+    </script>
+    <input id="zone"><button id="mybutton">click !</button>
+</body>
+</html>
