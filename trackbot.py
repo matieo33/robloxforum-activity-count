@@ -7,11 +7,6 @@ from colorama import init
 init()
 print(Style.RESET_ALL)
 
-
-# black, red, green, yellow, blue, magenta, cyan, white
-colors = ['black', 'red', 'green', 'yellow',
-          'blue', 'magenta', 'cyan', 'white']
-
 print("RF trackbot - credits to MATIEO33")
 print("RF: https://robloxforum.com/members/matieo33.8832/")
 print("Github: https://github.com/matieo33")
@@ -19,7 +14,6 @@ print("Available options: TRACK INFO")
 in_menu = 1
 while in_menu == 1:
     decision = str(input())
-    print(Fore.RESET, end='')
     if decision == "INFO":
         print("I made this bot purely for the purpose of entertainment, and if ever happens - maybe also will come in handy for somebody.")
         print("Wanna help this bot grow? Ping me on caci's/RF server, or DM me!")
