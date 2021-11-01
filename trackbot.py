@@ -18,7 +18,7 @@ print("Github: https://github.com/matieo33")
 print("Available options: TRACK INFO")
 in_menu = 1
 while in_menu == 1:
-    decision = str(input(Fore.GREEN))
+    decision = str(input())
     print(Fore.RESET, end='')
     if decision == "INFO":
         print("I made this bot purely for the purpose of entertainment, and if ever happens - maybe also will come in handy for somebody.")
