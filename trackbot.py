@@ -1,9 +1,14 @@
-from bs4 import BeautifulSoup
-import requests, time, re, keyboard
-from colorama import Style
-from datetime import datetime
-from termcolor import colored
-from colorama import init
+try:
+    from bs4 import BeautifulSoup
+    import requests, time, re
+    from colorama import Style
+    from termcolor import colored
+    from colorama import init
+    import os
+except ModuleNotFoundError:
+    print("The program is missing essential libraries. Read the Github's tutorial how to install all the libraries.")
+    os.exit(0)
+
 decision = ''
 init()
 print(Style.RESET_ALL)
@@ -12,7 +17,7 @@ print(Style.RESET_ALL)
 def print_status():
         obj = time.localtime()
         currentime = time.asctime(obj)
-        if decision == 'SAMPLE':
+        if decision == 'SAMPLE' or decision.lower == 'sample':
             pass
         else:
             time.sleep(a)
@@ -107,25 +112,27 @@ print("RF trackbot - credits to MATIEO33")
 print("RF: https://robloxforum.com/members/matieo33.8832/")
 print("Github: https://github.com/matieo33")
 print("Available options: TRACK SAMPLE HELP")
-in_menu = 1
-while in_menu == 1:
-    decision = str(input())
-    if decision == "HELP" or decision.lower() == 'help':
-        print("I made this bot purely for the purpose of entertainment, and if ever happens - maybe also will come in handy for somebody.")
-        print("Wanna help this bot grow? Ping me on caci's/RF server, or DM me!")
-        print("CONTROLS: CTRL + C will entirely stop the program, requiring you to restart.")
-        print("TRACK: Prints the activity of the site per amount of seconds you select.")
-        print("SAMPLE: Prints the activity of the site one time as an example of the program's work.")
-    elif decision == "SAMPLE" or decision.lower() == 'sample':
-        print('')
-        print_status()
-    elif decision == "TRACK" or decision.lower() == 'track':
-        print('')
-        in_menu = 0
-    else:
-        print("You typed something that was never intended, retry.")
 
-a = int(input("Every how much seconds do you wish to recieve updates on the site activity? "))
-b = str(input("Do you wish the data to be saved to a TXT file? (Y/N) "))
-if b == "Y":
-    c = str(input('Do you wish to include the list of all online users? (Y/N) '))
+if __name__ == '__main__':
+    in_menu = 1
+    while in_menu == 1:
+        decision = str(input())
+        if decision == "HELP" or decision.lower() == 'help':
+            print("I made this bot purely for the purpose of entertainment, and if ever happens - maybe also will come in handy for somebody.")
+            print("Wanna help this bot grow? DM me.")
+            print('Important: CTRL + C will stop the program entirely! Make sure to answer with "Y" if you wish to save the data to a TXT file.')
+            print("TRACK: Prints the activity of the site per amount of seconds you select.")
+            print("SAMPLE: Prints the activity of the site one time as an example of the program's work.")
+        elif decision == "SAMPLE" or decision.lower() == 'sample':
+            print('')
+            print_status()
+        elif decision == "TRACK" or decision.lower() == 'track':
+            print('')
+            in_menu = 0
+        else:
+            print("You typed something that was never intended, retry.")
+
+    a = int(input("Every how much seconds do you wish to recieve updates on the site activity? "))
+    b = str(input("Do you wish the data to be saved to a TXT file? (Y/N) "))
+    if b == "Y":
+        c = str(input('Do you wish to include the list of all online users? (Y/N) '))
