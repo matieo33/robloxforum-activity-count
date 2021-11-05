@@ -1,4 +1,4 @@
-![alt text](https://i.ibb.co/WnFXbZY/logomark.png
+![alt text](https://i.ibb.co/WnFXbZY/logomark.png)
 # RF-Activity-Count
 RF AC lets you see up-to-date activity on Roblox Forum. It's that simple.
 
