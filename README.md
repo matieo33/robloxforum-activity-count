@@ -20,3 +20,15 @@ If there are any issues, create an issue or contact me on Discord. Matieo33#5352
 
 # Usage
 Type in "INFO" and you will be shown all information about the program.
+
+# Additional Info
+Uses following libraries:
+BeautifulSoup
+requests
+time
+re
+termcolor
+colorama
+os
+
+Made in Python 3.9. Works without any problems on higher versions
