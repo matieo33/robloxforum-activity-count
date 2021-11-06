@@ -1,4 +1,4 @@
-![alt text]()
+![alt text](https://i.ibb.co/WnFXbZY/logomark.png)
 # RF-Activity-Count
 RF AC (Roblox Forum Activity Count) lets you see up-to-date activity on Roblox Forum every few seconds with next to no delay. Entirely made in Python as a small project to have fun making : )
 
