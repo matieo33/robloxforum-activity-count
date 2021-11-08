@@ -58,7 +58,6 @@ def print_status():
     print('\n')
     if decision == 'SAMPLE':
         print("END OF SAMPLE")
-        print("Available options: TRACK SAMPLE HELP")
     else:
         if b == "Y":
             with open("log.txt", "a") as o:
@@ -114,7 +113,7 @@ def run():
 print(colored("RF trackbot - credits to MATIEO33", 'blue'))
 print(colored("RF: https://robloxforum.com/members/matieo33.8832/", 'red'))
 print(colored("Github: https://github.com/matieo33", 'green'))
-print("Available options: TRACK SAMPLE HELP ")
+print("Available options: TRACK SAMPLE HELP")
 
 if __name__ == '__main__':
     in_menu = 1
@@ -135,7 +134,7 @@ if __name__ == '__main__':
             print('')
             in_menu = 0
         else:
-            print("You typed something that was never intended, retry.")
+            print("ERROR: unknown command " + "'" + decision + "'")
 
     a = int(input(
         "Every how much seconds do you wish to recieve updates on the site activity? "))
