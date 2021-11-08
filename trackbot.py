@@ -113,7 +113,7 @@ def run():
 print(colored("RF trackbot - credits to MATIEO33", 'blue'))
 print(colored("RF: https://robloxforum.com/members/matieo33.8832/", 'red'))
 print(colored("Github: https://github.com/matieo33", 'green'))
-print("Available options: TRACK SAMPLE HELP")
+print("Available options: TRACK SAMPLE HELP \n")
 
 if __name__ == '__main__':
     in_menu = 1
