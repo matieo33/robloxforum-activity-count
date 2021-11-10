@@ -14,7 +14,7 @@ Then, in the command prompt type the following:
 ```
 pip install -r requirements.txt
 ```
-Wait while all the necessary libraries are being downloaded. After all of them are downloaded, you are free to launch the program.
+Wait while all the necessary libraries are being downloaded. After all of them are downloaded, you are free to launch the program. (trackbot.py)
 
 If there are any issues, create an issue or contact me on Discord. Matieo33#5352
 
