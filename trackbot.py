@@ -11,6 +11,7 @@ except ModuleNotFoundError:
     print(colored("The program is missing essential libraries. Read the Github's tutorial how to install all the libraries.", 'red'))
     os.exit(0)
 
+os.system("mode con cols=150 lines=75")
 decision = ''
 init()
 
