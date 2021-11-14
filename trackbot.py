@@ -1,4 +1,13 @@
 try:
+    import logo as logo_print
+except ModuleNotFoundError:
+    missingfile = str(input("The program is missing a file. Continue anyways? "))
+    if missingfile == "yes" or "y" or "Y" or "Yes" or "YES":
+        pass
+    else:
+        os.exit(0)
+
+try:
     from bs4 import BeautifulSoup
     import requests
     import time
@@ -6,7 +15,6 @@ try:
     from termcolor import colored
     from colorama import init
     import os
-    import logo as logo_print
 except ModuleNotFoundError:
     print(colored("The program is missing essential libraries. Read the Github's tutorial how to install all the libraries.", 'red'))
     os.exit(0)
@@ -111,7 +119,10 @@ def run():
         print_status()
 # DEFS ABOVE
 
-print(logo_print.final_str)
+try:
+    print(logo_print.final_str)
+except ModuleNotFoundError:
+    pass
 print(colored("RF trackbot - credits to MATIEO33", 'blue'))
 print(colored("RF: https://robloxforum.com/members/matieo33.8832/", 'red'))
 print(colored("Github: https://github.com/matieo33", 'green'))
