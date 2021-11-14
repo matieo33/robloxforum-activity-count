@@ -59,7 +59,7 @@ def print_status():
             print(colored(span.text, 'blue', attrs=['bold']))
     print('\n')
     if decision == 'SAMPLE':
-        print("END OF SAMPLE")
+        print()
     else:
         if b == "Y":
             with open("log.txt", "a") as o:
