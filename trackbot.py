@@ -39,8 +39,9 @@ def print_status():
     usernames = soup.find_all('span', class_=['username--style1', 'username--style2', 'username--style3', 'username--style4',
                                               'username--style5', 'username--style6', 'username--style7', 'username--style8', 'username--style9', 'username--style10'
                                               'username--style11'])
+    whitespace_remove = stringy.replace('				Robots', "Robots")
     print(currentime)
-    print(stringy)
+    print(whitespace_remove)
     for span in usernames:
         attr = span.attrs['class']
         numbas = re.findall(r'\d+', str(attr))
@@ -73,7 +74,8 @@ def print_status():
             with open("log.txt", "a") as o:
                 encoded_string = stringy.encode("ascii", "ignore")
                 decode_string = encoded_string.decode()
-                o.write(decode_string)
+                whitespace_remove = decode_string.replace('				Robots', "Robots")
+                o.write(whitespace_remove)
                 if c == "Y": o.write(currentime + '\n')
                 for span in usernames:
                     attr = span.attrs['class']
