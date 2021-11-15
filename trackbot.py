@@ -2,7 +2,7 @@ try:
     import logo as logo_print
 except ModuleNotFoundError:
     missingfile = str(input("The program is missing a file. Continue anyways? "))
-    if missingfile == "yes" or "y" or "Y" or "Yes" or "YES":
+    if missingfile.lower() == "yes" or "y" or "yea":
         pass
     else:
         os.exit(0)
@@ -134,7 +134,7 @@ if __name__ == '__main__':
     in_menu = 1
     while in_menu == 1:
         decision = str(input())
-        if decision == "HELP" or decision.lower() == 'help':
+        if decision.lower() == 'help':
             print("I made this bot purely for the purpose of entertainment, and if ever happens - maybe also will come in handy for somebody.")
             print("Wanna help this bot grow? DM me.")
             print('Important: CTRL + C will stop the program entirely! Make sure to answer with "Y" if you wish to save the data to a TXT file.')
@@ -142,10 +142,10 @@ if __name__ == '__main__':
                 "TRACK: Prints the activity of the site per amount of seconds you select.")
             print(
                 "SAMPLE: Prints the activity of the site one time as an example of the program's work.")
-        elif decision == "SAMPLE" or decision.lower() == 'sample':
+        elif decision.lower() == 'sample':
             print('')
             print_status()
-        elif decision == "TRACK" or decision.lower() == 'track':
+        elif decision.lower() == 'track':
             print('')
             in_menu = 0
         else:
