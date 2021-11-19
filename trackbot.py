@@ -29,7 +29,7 @@ init()
 def print_status():
     obj = time.localtime()
     currentime = time.asctime(obj)
-    if decision == 'SAMPLE' or decision.lower == 'sample':
+    if decision.lower == 'sample':
         pass
     else:
         time.sleep(a)
@@ -70,20 +70,20 @@ def print_status():
     if decision == 'SAMPLE':
         print()
     else:
-        if b == "Y":
+        if b.lower() == "y" or "yes" or "yea":
             with open("log.txt", "a") as o:
                 encoded_string = stringy.encode("ascii", "ignore")
                 decode_string = encoded_string.decode()
                 whitespace_remove = decode_string.replace('				Robots', "Robots")
                 o.write(whitespace_remove)
-                if c == "Y": o.write(currentime + '\n')
+                if c.lower() == "y" or "yes" or "yea": o.write(currentime + '\n')
                 for span in usernames:
                     attr = span.attrs['class']
                     numbas = re.findall(r'\d+', str(attr))
                     sp = span.text
                     obj = time.localtime()
                     currentime = time.asctime(obj)
-                    if c == "Y":
+                    if c.lower() == "y" or "yes" or "yea":
                         if numbas[0] == "2":
                             o.write(sp + " | normal user")
                             o.write('\n')
@@ -153,9 +153,9 @@ if __name__ == '__main__':
 
     a = int(input(
         "Every how much seconds do you wish to recieve updates on the site activity? "))
-    b = str(input("Do you wish the data to be saved to a TXT file? (Y/N) "))
-    if b == "Y":
-        c = str(input('Do you wish to include the list of all online users? (Y/N) '))
+    b = str(input("Do you wish the data to be saved to a TXT file? "))
+    if b.lower() == "y" or "yes" or "yea":
+        c = str(input('Do you wish to include the list of all online users? '))
         while 1:
             print_status()
     else:
