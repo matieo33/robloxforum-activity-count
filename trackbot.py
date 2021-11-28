@@ -9,7 +9,7 @@ except ModuleNotFoundError:
 
 try:
     from bs4 import BeautifulSoup
-    import requests, time, re, os ,random
+    import requests, time, re, os, random
     from termcolor import colored
     from colorama import init
 except ModuleNotFoundError and ImportError:
