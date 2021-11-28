@@ -9,19 +9,19 @@ except ModuleNotFoundError:
 
 try:
     from bs4 import BeautifulSoup
-    import requests
-    import time
-    import re
+    import requests, time, re, os ,random
     from termcolor import colored
     from colorama import init
-    import os
-except ModuleNotFoundError:
-    print(colored("The program is missing essential libraries. Read the Github's tutorial how to install all the libraries.", 'red'))
+except ModuleNotFoundError and ImportError:
+    print("The program is missing essential libraries. Read the Github's tutorial how to install all the libraries.")
     os.exit(0)
+
 
 os.system("mode con cols=150 lines=75")
 decision = ''
 init()
+
+colors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan']
 
 # DEFS BELOW
 
@@ -122,7 +122,7 @@ def run():
 # DEFS ABOVE
 
 try:
-    print(logo_print.final_str)
+    print(colored(logo_print.final_str, random.choice(colors)))
 except ModuleNotFoundError:
     pass
 print(colored("RF trackbot - credits to MATIEO33", 'blue'))
