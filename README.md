@@ -27,5 +27,6 @@ re
 termcolor
 colorama
 os
+random
 
 Made in Python 3.9. Works without any problems on higher versions
