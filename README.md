@@ -14,7 +14,10 @@ Then, in the command prompt type the following:
 ```
 pip install -r requirements.txt
 ```
-Wait while all the necessary libraries are being downloaded. After all of them are downloaded, you are free to launch the program. (trackbot.py)
+Wait while all the necessary libraries are being downloaded. After all of them are downloaded, you can use either of the 2 builds.
+New build features more colorful display, and makes the program more optimized (faster). Released as of 19.12.2021 (DD/MM/YY)
+Old build is old build. Released as of 11.11.2021 (DD/MM/YY)
+When you choose one of them, enter the folder and launch trackbot.py and afterwards you are free to go!
 
 If there are any issues, create an issue or contact me on Discord. Matieo33#5352
 
