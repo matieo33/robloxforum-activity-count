@@ -25,13 +25,13 @@ colors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan']
 
 # DEFS BELOW
 
-
 def print_status():
     obj = time.localtime()
     currentime = time.asctime(obj)
-    if decision.lower == 'sample':
+    if decision == 'sample' or 'SAMPLE':
         pass
     else:
+        print(decision)
         time.sleep(a)
     source = requests.get('https://www.robloxforum.com').text
     soup = BeautifulSoup(source, 'lxml')
@@ -67,7 +67,7 @@ def print_status():
         elif numbas[0] == "11":
             print(colored(span.text, 'blue', attrs=['bold']))
     print('\n')
-    if decision == 'SAMPLE':
+    if decision == 'SAMPLE' or 'sample':
         print()
     else:
         if b.lower() == "y" or "yes" or "yea":

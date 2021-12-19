@@ -31,7 +31,7 @@ rankattrs = ["", "bold", "bold", "bold", "", "", "", "striked", "bold"]
 def print_status():
     obj = time.localtime()
     currentime = time.asctime(obj)
-    if decision.lower == 'sample':
+    if decision == 'sample' or 'SAMPLE':
         pass
     else:
         time.sleep(a)
@@ -48,23 +48,19 @@ def print_status():
         attr = span.attrs['class']
         numbas = re.findall(r'\d+', str(attr))
         global wowierank, therank, therankcolor, therankattrs
-        wowierank = int(numbas[0])
+        wowierank = int(numbas[0]) - 2
         therank = rank[wowierank]
         therankcolor = rankcolor[wowierank]
         therankattrs = rankattrs[wowierank]
-        if rankcolor and rankattrs == "":
+        if therank != "2":
+            if therank != "3" and "4" and "6":
+                print(colored(span.text, therankcolor))
+            else:
+                print(colored(span.text, therankcolor, attrs=[therankattrs]))
+        else:
             print(span.text)
-        elif rankcolor != "" and rankattrs == "":
-            print(colored(span.text, therankcolor))
-        elif rankcolor != "" and rankattrs != "":
-            print(colored(span.text, therankcolor, attrs=[therankattrs]))
-        elif rankcolor != "" and rankattrs == "yellow":
-            def strike(text):
-                return ''.join([u'\u0336{}'.format(c) for c in text])
-            black = (colored(span.text, 'yellow'))
-            print(strike(black))
     print('\n')
-    if decision == 'SAMPLE':
+    if decision == 'sample' or 'SAMPLE':
         print()
     else:
         if b.lower() == "y" or "yes" or "yea":
