@@ -28,7 +28,7 @@ colors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan']
 def print_status():
     obj = time.localtime()
     currentime = time.asctime(obj)
-    if decision == 'sample' or 'SAMPLE':
+    if decision.lower() == 'sample':
         pass
     else:
         print(decision)

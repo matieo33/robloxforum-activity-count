@@ -29,12 +29,12 @@ rankattrs = ["", "bold", "bold", "bold", "", "", "", "striked", "bold"]
 # DEFS BELOW
 
 def print_status():
-    obj = time.localtime()
-    currentime = time.asctime(obj)
-    if decision == 'sample' or 'SAMPLE':
+    if decision.lower() == 'sample':
         pass
     else:
         time.sleep(a)
+    obj = time.localtime()
+    currentime = time.asctime(obj)
     source = requests.get('https://www.robloxforum.com').text
     soup = BeautifulSoup(source, 'lxml')
     stringy = soup.find('span', class_='block-footer-counter').text
@@ -61,7 +61,7 @@ def print_status():
             print(span.text)
     print('\n')
     if decision == 'sample' or 'SAMPLE':
-        print()
+        print();print()
     else:
         if b.lower() == "y" or "yes" or "yea":
             with open("log.txt", "a") as o:
